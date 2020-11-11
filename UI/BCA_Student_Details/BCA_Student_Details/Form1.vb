@@ -1,9 +1,11 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Data
+Imports System.Data.SqlClient
 Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Connect()
-        Label6.Text = "Success"
+        'Connect()
+        'Label6.Visible = True
+        'Label6.Text = "Success"
     End Sub
 
     
@@ -16,10 +18,26 @@ Public Class Form1
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-
+        Me.Hide()
+        Form2.Show()
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\v11.0;Initial Catalog=student_info;Integrated Security=True")
+        Dim cmd As SqlCommand = New SqlCommand("select * from login where username = '" + TextBox1.Text + "' and Password ='" + TextBox2.Text + "'", con)
+
+        Dim sqladapter As SqlDataAdapter = New SqlDataAdapter(cmd)
+
+        Dim dt As DataTable = New DataTable()
+
+        sqladapter.Fill(dt)
+
+        If dt.Rows.Count() > 0 Then
+            Label3.Visible = False
+            MsgBox("Success")
+        Else
+            Label3.Visible = True
+        End If
 
     End Sub
 End Class

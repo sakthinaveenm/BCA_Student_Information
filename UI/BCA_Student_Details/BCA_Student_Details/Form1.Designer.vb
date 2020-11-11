@@ -134,9 +134,9 @@ Partial Class Form1
         Me.Label6.ForeColor = System.Drawing.Color.Green
         Me.Label6.Location = New System.Drawing.Point(626, 25)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(60, 15)
+        Me.Label6.Size = New System.Drawing.Size(91, 15)
         Me.Label6.TabIndex = 12
-        Me.Label6.Text = "Success"
+        Me.Label6.Text = "Connecting..."
         Me.Label6.Visible = False
         '
         'Form1
