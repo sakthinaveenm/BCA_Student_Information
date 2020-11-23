@@ -1,0 +1,10 @@
+﻿insert into student_info values('A001','Anbu','BCA','A','2018 - 2021');
+insert into student_info values('A002','Babu','BCA','A','2018 - 2021');
+insert into student_info values('A003','Cedric','BCA','A','2018 - 2021');
+insert into student_info values('A004','Drump','BCA','A','2018 - 2021');
+insert into student_info values('A005','Elil','BCA','A','2018 - 2021');
+insert into student_info values('B001','Ajith','BCA','B','2018 - 2021');
+insert into student_info values('B002','Balaji','BCA','B','2018 - 2021');
+insert into student_info values('B003','Charles','BCA','B','2018 - 2021');
+insert into student_info values('B004','Dennis','BCA','B','2018 - 2021');
+insert into student_info values('B005','Eman','BCA','B','2018 - 2021');

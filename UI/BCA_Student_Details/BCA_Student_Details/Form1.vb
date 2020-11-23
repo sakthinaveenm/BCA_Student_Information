@@ -1,14 +1,14 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
-Public Class Form1
+Public Class Sign_in_Form
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Connect()
-        'Label6.Visible = True
-        'Label6.Text = "Success"
+        Connect()
+        Label6.Visible = True
+        Label6.Text = "Success"
     End Sub
 
-    
+
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked Then
             TextBox2.PasswordChar = ""
@@ -19,7 +19,7 @@ Public Class Form1
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Me.Hide()
-        Form2.Show()
+        SignupForm.Show()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -35,7 +35,10 @@ Public Class Form1
         If dt.Rows.Count() > 0 Then
             Label3.Visible = False
             MsgBox("Success")
+            Me.Hide()
+            Form3.Show()
         Else
+            Label3.ForeColor = Color.Red
             Label3.Visible = True
         End If
 

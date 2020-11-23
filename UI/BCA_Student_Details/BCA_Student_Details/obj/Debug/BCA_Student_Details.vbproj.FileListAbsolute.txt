@@ -2,9 +2,13 @@ C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Informa
 C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\bin\Debug\BCA_Student_Details.exe
 C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\bin\Debug\BCA_Student_Details.pdb
 C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\bin\Debug\BCA_Student_Details.xml
-C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.Form1.resources
 C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.Resources.resources
 C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.vbproj.GenerateResource.Cache
 C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.exe
 C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.xml
 C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.pdb
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.SignupForm.resources
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.Form3.resources
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.Sign_in_Form.resources
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.View_Record.resources
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.Form4.resources

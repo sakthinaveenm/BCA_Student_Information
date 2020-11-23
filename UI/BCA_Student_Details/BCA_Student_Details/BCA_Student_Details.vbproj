@@ -83,6 +83,18 @@
     <Compile Include="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.vb">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -99,16 +111,54 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="student_info.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>student_info.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="student_infoDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>student_infoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="student_infoDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>student_infoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="student_infoDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>student_infoDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View_Record.Designer.vb">
+      <DependentUpon>View_Record.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View_Record.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Record.resx">
+      <DependentUpon>View_Record.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +172,50 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="student_info.xsc">
+      <DependentUpon>student_info.xsd</DependentUpon>
+    </None>
+    <None Include="student_info.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>student_info.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="student_info.xss">
+      <DependentUpon>student_info.xsd</DependentUpon>
+    </None>
+    <None Include="student_infoDataSet.xsc">
+      <DependentUpon>student_infoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="student_infoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>student_infoDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="student_infoDataSet.xss">
+      <DependentUpon>student_infoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="student_infoDataSet1.xsc">
+      <DependentUpon>student_infoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="student_infoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>student_infoDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="student_infoDataSet1.xss">
+      <DependentUpon>student_infoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="student_infoDataSet2.xsc">
+      <DependentUpon>student_infoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="student_infoDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>student_infoDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="student_infoDataSet2.xss">
+      <DependentUpon>student_infoDataSet2.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
