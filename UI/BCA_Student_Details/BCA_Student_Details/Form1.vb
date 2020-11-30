@@ -24,7 +24,7 @@ Public Class Sign_in_Form
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\v11.0;Initial Catalog=student_info;Integrated Security=True")
-        Dim cmd As SqlCommand = New SqlCommand("select * from login where username = '" + TextBox1.Text + "' and Password ='" + TextBox2.Text + "'", con)
+        Dim cmd As SqlCommand = New SqlCommand("select * from login where username = '" + TextBox1.Text + "' and Password ='" + TextBox2.Text + "';", con)
 
         Dim sqladapter As SqlDataAdapter = New SqlDataAdapter(cmd)
 
@@ -36,11 +36,13 @@ Public Class Sign_in_Form
             Label3.Visible = False
             MsgBox("Success")
             Me.Hide()
-            Form3.Show()
+            Main_Option.Show()
         Else
-            Label3.ForeColor = Color.Red
+
             Label3.Visible = True
+            Label3.ForeColor = Color.Red
         End If
 
     End Sub
+
 End Class

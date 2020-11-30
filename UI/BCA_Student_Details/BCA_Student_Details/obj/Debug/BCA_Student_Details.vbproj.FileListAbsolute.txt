@@ -12,3 +12,11 @@ C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Informa
 C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.Sign_in_Form.resources
 C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.View_Record.resources
 C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.Form4.resources
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.AddRecord.resources
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.DeleteRecordvb.resources
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.Form5.resources
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.Main_Option.resources
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.vbprojResolveAssemblyReference.cache
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.updateRecord.resources
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.MarkSheets.resources
+C:\Users\Sakthi Naveen M\Documents\Projects\College Projects\BCA_Student_Information\UI\BCA_Student_Details\BCA_Student_Details\obj\Debug\BCA_Student_Details.Student_Attendance.resources
