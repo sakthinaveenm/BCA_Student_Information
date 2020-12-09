@@ -7,10 +7,12 @@
                     
                     
 #Project Members :
-                * Sakthi Naveen - Coding
-                * Alavanthan    - Documentation
-                * Karthick      - Project Manager
-                * Leo Meshaz    - Database Design
-                * Roshan        - UI Design
-                * Jayanth       - Helper
-                
+
+           * Sakthi Naveen - Coding
+           * Alavanthan    - Documentation
+           * Karthick      - Project Manager
+           * Leo Meshaz    - Database Design
+           * Roshan        - UI Design
+           * Jayanth       - Helper
+
+                           
