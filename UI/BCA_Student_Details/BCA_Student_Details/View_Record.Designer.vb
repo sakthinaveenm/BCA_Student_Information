@@ -47,6 +47,8 @@ Partial Class View_Record
         Me.college_email = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pincode = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SectionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StudentdetailsBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Student_database_ProjectDataSet = New BCA_Student_Details.student_database_ProjectDataSet()
         Me.StudentdetailsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.StudentDetailsALL = New BCA_Student_Details.StudentDetailsALL()
         Me.StudentinfoBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
@@ -69,7 +71,12 @@ Partial Class View_Record
         Me.Student_detailsTableAdapter = New BCA_Student_Details.student_infoDataSet3TableAdapters.student_detailsTableAdapter()
         Me.Student_detailsTableAdapter1 = New BCA_Student_Details.StudentDetailsALLTableAdapters.student_detailsTableAdapter()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Student_detailsTableAdapter2 = New BCA_Student_Details.student_database_ProjectDataSetTableAdapters.student_detailsTableAdapter()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StudentdetailsBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Student_database_ProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentdetailsBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentDetailsALL, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentinfoBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,13 +149,14 @@ Partial Class View_Record
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DepartmentDataGridViewTextBoxColumn, Me.register_no, Me.student_name, Me.Dob, Me.age, Me.graduate, Me.gender, Me.year_, Me.bloodgroup, Me.father_name, Me.mother_name, Me.guardian_name, Me.address_home, Me.personal_email, Me.college_email, Me.pincode, Me.SectionDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.StudentdetailsBindingSource1
-        Me.DataGridView1.Location = New System.Drawing.Point(1, 126)
+        Me.DataGridView1.DataSource = Me.StudentdetailsBindingSource2
+        Me.DataGridView1.Location = New System.Drawing.Point(57, 122)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(1271, 487)
+        Me.DataGridView1.Size = New System.Drawing.Size(1246, 468)
         Me.DataGridView1.TabIndex = 6
         '
         'DepartmentDataGridViewTextBoxColumn
@@ -270,6 +278,16 @@ Partial Class View_Record
         Me.SectionDataGridViewTextBoxColumn.Name = "SectionDataGridViewTextBoxColumn"
         Me.SectionDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'StudentdetailsBindingSource2
+        '
+        Me.StudentdetailsBindingSource2.DataMember = "student_details"
+        Me.StudentdetailsBindingSource2.DataSource = Me.Student_database_ProjectDataSet
+        '
+        'Student_database_ProjectDataSet
+        '
+        Me.Student_database_ProjectDataSet.DataSetName = "student_database_ProjectDataSet"
+        Me.Student_database_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'StudentdetailsBindingSource1
         '
         Me.StudentdetailsBindingSource1.DataMember = "student_details"
@@ -377,11 +395,36 @@ Partial Class View_Record
         Me.Button1.Text = "<= Back"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Student_detailsTableAdapter2
+        '
+        Me.Student_detailsTableAdapter2.ClearBeforeFill = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(1228, 12)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 8
+        Me.Button2.Text = "Load Record"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(634, 60)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 11
+        Me.Button3.Text = "Find"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'View_Record
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1284, 625)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1306, 638)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
@@ -391,8 +434,10 @@ Partial Class View_Record
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Year)
         Me.Name = "View_Record"
-        Me.Text = "View_Record"
+        Me.Text = "View Students Details"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StudentdetailsBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Student_database_ProjectDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentdetailsBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentDetailsALL, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentinfoBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -457,4 +502,9 @@ Partial Class View_Record
     Friend WithEvents SectionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Private WithEvents Year As System.Windows.Forms.ComboBox
+    Friend WithEvents Student_database_ProjectDataSet As BCA_Student_Details.student_database_ProjectDataSet
+    Friend WithEvents StudentdetailsBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents Student_detailsTableAdapter2 As BCA_Student_Details.student_database_ProjectDataSetTableAdapters.student_detailsTableAdapter
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

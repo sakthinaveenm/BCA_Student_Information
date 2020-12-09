@@ -9,15 +9,14 @@ Public Class SignupForm
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
-        Dim cn As SqlConnection = New SqlConnection("Data Source=(LocalDB)\v11.0;Initial Catalog=student_info;Integrated Security=True")
+        connect()
         Dim cmd As New SqlCommand
-        cmd.Connection = cn
-        cn.Open()
+        cmd.Connection = con
         cmd.CommandText = "INSERT INTO login VALUES ('" + TextBox1.Text + "','" + TextBox2.Text + "');"
         If cmd.ExecuteNonQuery() Then
             MsgBox("Record added Succesfully")
         End If
-        cn.Close()
+        con.Close()
     End Sub
 
     Private Sub SignupForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load

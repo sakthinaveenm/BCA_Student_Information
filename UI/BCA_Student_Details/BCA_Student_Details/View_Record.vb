@@ -3,9 +3,8 @@ Imports System.Data.SqlClient
 
 Public Class View_Record
     Private Sub View_Record_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'StudentDetailsALL.student_details' table. You can move, or remove it, as needed.
-        Me.Student_detailsTableAdapter1.Fill(Me.StudentDetailsALL.student_details)
-       
+        'Record View Code
+        Me.Student_detailsTableAdapter2.Fill(Me.Student_database_ProjectDataSet.student_details)
         'Add Year Values
         Year.Items.Add("2015 - 2018")
         Year.Items.Add("2016 - 2019")
@@ -19,57 +18,73 @@ Public Class View_Record
         'added section values
         Section.Items.Add("A")
         Section.Items.Add("B")
-        'DEpartments Adding Area
+        'added Department Values
         Department.Items.Add("BCA")
-        Department.Items.Add("BSW")
-        Department.Items.Add("BBA")
-
+        Department.Text = "BCA"
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
-        Form3.Show()
+        Main_Option.Show()
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Student_detailsTableAdapter2.Fill(Me.Student_database_ProjectDataSet.student_details)
+        '
+        connect()
+        Dim query As String = "select * from student_details where  Department = 'BCA'"
+        Dim cmd As New SqlCommand(query, con)
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable()
+        table.Clear()
+        adapter.Fill(table)
+        DataGridView1.DataSource = table
+    End Sub
+    'Only Checks for Department
+    Private Sub Department_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Department.SelectedIndexChanged
+        connect()
+        Dim query As String = "select * from student_details where  Department = '" + Department.Text + "'"
+        Dim cmd As New SqlCommand(query, con)
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable()
+        table.Clear()
+        adapter.Fill(table)
+        DataGridView1.DataSource = table
+    End Sub
+    'Only Checks for Section
+    Private Sub Section_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Section.SelectedIndexChanged
+        connect()
+        Dim query As String = "select * from student_details where  section = '" + Section.Text +"'"
+        Dim cmd As New SqlCommand(query, con)
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable()
+        table.Clear()
+        adapter.Fill(table)
+        DataGridView1.DataSource = table
+    End Sub
+    'Only Checks for Year
+    Private Sub Year_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Year.SelectedIndexChanged
+        connect()
+        Dim query As String = "select * from student_details where  year_ = '" + Year.Text + "'"
+        Dim cmd As New SqlCommand(query, con)
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable()
+        table.Clear()
+        adapter.Fill(table)
+        DataGridView1.DataSource = table
+    End Sub
+    ' Checks for both department,section and year 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        connect()
+        Dim query As String = "select * from student_details where  year_ = '" + Year.Text + "' and section = '" + Section.Text + "' and Department = '" + Department.Text + "'"
+        Dim cmd As New SqlCommand(query, con)
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable()
+        table.Clear()
+        adapter.Fill(table)
+        DataGridView1.DataSource = table
+    End Sub
 End Class
 
 
 
-'Mistake happened  code
-'Dim con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\v11.0;Initial Catalog=student_info;Integrated Security=True")
-''Dim reader As SqlDataReader
-''Try
-'con.Open()
-'Dim cmd As SqlCommand = New SqlCommand("select * from student_details", con)
-'Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
-'Dim table As New DataTable()
-'adapter.Fill(table)
-'ComboBox1.DataSource = table
-'ComboBox1.DisplayMember = "year_"
-'ComboBox1.ValueMember = "register_no"
-''reader = cmd.ExecuteReader
-''While reader.Read
-''    Dim syear As String
-''    syear = reader.GetString("year_")
-''    ComboBox1.Items.Add(syear)
-''End While
-''con.Close()
-' ''Catch ex As Exception
-''MsgBox("Error")
-
-''End Try
-
-
-'Data Grid view errored Code
-'TODO: This line of code loads data into the 'Student_infoDataSet3.student_details' table. You can move, or remove it, as needed.
-'Me.Student_detailsTableAdapter.Fill(Me.Student_infoDataSet3.student_details)
-''TODO: This line of code loads data into the 'Student_Database_Final.student_info' table. You can move, or remove it, as needed.
-'Me.Student_infoTableAdapter4.Fill(Me.Student_Database_Final.student_info)
-''TODO: This line of code loads data into the 'Student_infoDataSet2.student_info' table. You can move, or remove it, as needed.
-'Me.Student_infoTableAdapter3.Fill(Me.Student_infoDataSet2.student_info)
-''TODO: This line of code loads data into the 'Student_infoDataSet1.student_info' table. You can move, or remove it, as needed.
-'Me.Student_infoTableAdapter2.Fill(Me.Student_infoDataSet1.student_info)
-''TODO: This line of code loads data into the 'Student_infoDataSet.student_info' table. You can move, or remove it, as needed.
-'Me.Student_infoTableAdapter1.Fill(Me.Student_infoDataSet.student_info)
-''TODO: This line of code loads data into the 'Student_info._student_info' table. You can move, or remove it, as needed.
-'Me.Student_infoTableAdapter.Fill(Me.Student_info._student_info)

@@ -1,17 +1,26 @@
 ﻿Public Class Main_Option
-
-   
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Me.Hide()
-        Form3.Show()
+        View_Record.Show()
+
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Me.Hide()
+        AddRecord.Show()
+    End Sub
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Hide()
-        Student_Attendance.Show()
+        MarkSheet.Show()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Hide()
-        MarkSheets.Show()
+        Sign_in_Form.Show()
+    End Sub
+
+    Private Sub Main_Option_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

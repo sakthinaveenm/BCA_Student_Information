@@ -58,12 +58,16 @@ Partial Class AddRecord
         Me.Days = New System.Windows.Forms.ComboBox()
         Me.Month = New System.Windows.Forms.ComboBox()
         Me.DobYear = New System.Windows.Forms.ComboBox()
-        Me.age = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.pincode = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.age = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.age, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'student_name
@@ -167,7 +171,7 @@ Partial Class AddRecord
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(737, 502)
+        Me.Button1.Location = New System.Drawing.Point(446, 540)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 9
@@ -194,15 +198,16 @@ Partial Class AddRecord
         '
         'address_home
         '
-        Me.address_home.Location = New System.Drawing.Point(524, 130)
+        Me.address_home.Location = New System.Drawing.Point(524, 110)
+        Me.address_home.Multiline = True
         Me.address_home.Name = "address_home"
-        Me.address_home.Size = New System.Drawing.Size(270, 20)
+        Me.address_home.Size = New System.Drawing.Size(336, 40)
         Me.address_home.TabIndex = 12
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(449, 137)
+        Me.Label7.Location = New System.Drawing.Point(449, 113)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(45, 13)
         Me.Label7.TabIndex = 13
@@ -245,6 +250,7 @@ Partial Class AddRecord
         '
         'ComboBox4
         '
+        Me.ComboBox4.Cursor = System.Windows.Forms.Cursors.No
         Me.ComboBox4.FormattingEnabled = True
         Me.ComboBox4.Location = New System.Drawing.Point(737, 59)
         Me.ComboBox4.Name = "ComboBox4"
@@ -372,13 +378,6 @@ Partial Class AddRecord
         Me.DobYear.Size = New System.Drawing.Size(63, 21)
         Me.DobYear.TabIndex = 38
         '
-        'age
-        '
-        Me.age.Location = New System.Drawing.Point(124, 445)
-        Me.age.Name = "age"
-        Me.age.Size = New System.Drawing.Size(100, 20)
-        Me.age.TabIndex = 39
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -413,16 +412,54 @@ Partial Class AddRecord
         Me.Label14.TabIndex = 43
         Me.Label14.Text = "Pincode"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(554, 540)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 44
+        Me.Button3.Text = "Update Record"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(666, 540)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 45
+        Me.Button4.Text = "Delete Record"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(785, 540)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 46
+        Me.Button5.Text = "Search Record"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'age
+        '
+        Me.age.Location = New System.Drawing.Point(112, 450)
+        Me.age.Name = "age"
+        Me.age.Size = New System.Drawing.Size(51, 20)
+        Me.age.TabIndex = 47
+        '
         'AddRecord
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Aqua
         Me.ClientSize = New System.Drawing.Size(939, 575)
+        Me.Controls.Add(Me.age)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.pincode)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.age)
         Me.Controls.Add(Me.DobYear)
         Me.Controls.Add(Me.Month)
         Me.Controls.Add(Me.Days)
@@ -458,9 +495,10 @@ Partial Class AddRecord
         Me.Controls.Add(Me.Department)
         Me.Controls.Add(Me.student_name)
         Me.Name = "AddRecord"
-        Me.Text = "AddRecord"
+        Me.Text = "Student Record"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.age, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -501,9 +539,12 @@ Partial Class AddRecord
     Friend WithEvents Days As System.Windows.Forms.ComboBox
     Friend WithEvents Month As System.Windows.Forms.ComboBox
     Friend WithEvents DobYear As System.Windows.Forms.ComboBox
-    Friend WithEvents age As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents pincode As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents age As System.Windows.Forms.NumericUpDown
 End Class

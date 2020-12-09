@@ -76,7 +76,6 @@ Partial Class Sign_in_Form
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Enabled = False
         Me.Label3.ForeColor = System.Drawing.Color.Red
         Me.Label3.Location = New System.Drawing.Point(275, 245)
         Me.Label3.Name = "Label3"
@@ -154,6 +153,7 @@ Partial Class Sign_in_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(739, 438)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)

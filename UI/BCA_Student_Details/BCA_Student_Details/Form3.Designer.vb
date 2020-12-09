@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form3
+Partial Class DeleteRecordDialog
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,104 +22,75 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.studentyear = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(158, 175)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(242, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Update Record"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(158, 254)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(242, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Delete Record"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(158, 213)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(242, 23)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Create Record"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(158, 134)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(242, 23)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "View Record"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(171, 65)
+        Me.Label1.Location = New System.Drawing.Point(27, 39)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(200, 26)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Student Full Details"
+        Me.Label1.Size = New System.Drawing.Size(86, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Register Number"
         '
-        'Button6
+        'Label2
         '
-        Me.Button6.Location = New System.Drawing.Point(26, 492)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 7
-        Me.Button6.Text = "signout"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(45, 88)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(29, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Year"
         '
-        'Button4
+        'TextBox1
         '
-        Me.Button4.Location = New System.Drawing.Point(40, 28)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 8
-        Me.Button4.Text = "<= Back"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.TextBox1.Location = New System.Drawing.Point(128, 32)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(228, 20)
+        Me.TextBox1.TabIndex = 2
         '
-        'Form3
+        'studentyear
+        '
+        Me.studentyear.FormattingEnabled = True
+        Me.studentyear.Location = New System.Drawing.Point(106, 80)
+        Me.studentyear.Name = "studentyear"
+        Me.studentyear.Size = New System.Drawing.Size(82, 21)
+        Me.studentyear.TabIndex = 3
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(113, 150)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Delete"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'DeleteRecordDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(567, 527)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.BackColor = System.Drawing.Color.Aqua
+        Me.ClientSize = New System.Drawing.Size(384, 239)
         Me.Controls.Add(Me.Button1)
-        Me.Name = "Form3"
-        Me.Text = "Form3"
+        Me.Controls.Add(Me.studentyear)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Name = "DeleteRecordDialog"
+        Me.Text = "  Delete Record"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents studentyear As System.Windows.Forms.ComboBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

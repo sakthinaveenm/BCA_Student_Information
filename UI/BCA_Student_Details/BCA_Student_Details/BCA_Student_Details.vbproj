@@ -46,11 +46,16 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -78,11 +83,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CurrentDb.vb" />
-    <Compile Include="DeleteRecordvb.Designer.vb">
-      <DependentUpon>DeleteRecordvb.vb</DependentUpon>
-    </Compile>
-    <Compile Include="DeleteRecordvb.vb">
-      <SubType>Form</SubType>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -103,28 +107,16 @@
     <Compile Include="Form3.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.vb">
-      <DependentUpon>Form4.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form4.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form5.Designer.vb">
-      <DependentUpon>Form5.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form5.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Main_Option.Designer.vb">
       <DependentUpon>Main_Option.vb</DependentUpon>
     </Compile>
     <Compile Include="Main_Option.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MarkSheets.Designer.vb">
-      <DependentUpon>MarkSheets.vb</DependentUpon>
+    <Compile Include="MarkSheet.Designer.vb">
+      <DependentUpon>MarkSheet.vb</DependentUpon>
     </Compile>
-    <Compile Include="MarkSheets.vb">
+    <Compile Include="MarkSheet.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
@@ -143,21 +135,48 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PrintForm.Designer.vb">
+      <DependentUpon>PrintForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Card.Designer.vb">
+      <DependentUpon>Report_Card.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Card.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Searchform.Designer.vb">
+      <DependentUpon>Searchform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Searchform.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StudentDetailsALL.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StudentDetailsALL.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Student_Attendance.Designer.vb">
-      <DependentUpon>Student_Attendance.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Student_Attendance.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="student_Database_Final.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>student_Database_Final.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="student_database_ProjectDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>student_database_ProjectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="student_database_ProjectFirstyear.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>student_database_ProjectFirstyear.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="student_database_yeartwo.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>student_database_yeartwo.xsd</DependentUpon>
     </Compile>
     <Compile Include="student_info.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -189,25 +208,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>student_infoDeleteinfomation.xsd</DependentUpon>
     </Compile>
-    <Compile Include="updateRecord.Designer.vb">
-      <DependentUpon>updateRecord.vb</DependentUpon>
-    </Compile>
-    <Compile Include="updateRecord.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="View_Record.Designer.vb">
       <DependentUpon>View_Record.vb</DependentUpon>
     </Compile>
     <Compile Include="View_Record.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="yearonefinalone.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>yearonefinalone.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddRecord.resx">
       <DependentUpon>AddRecord.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeleteRecordvb.resx">
-      <DependentUpon>DeleteRecordvb.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -218,17 +233,11 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main_Option.resx">
       <DependentUpon>Main_Option.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MarkSheets.resx">
-      <DependentUpon>MarkSheets.vb</DependentUpon>
+    <EmbeddedResource Include="MarkSheet.resx">
+      <DependentUpon>MarkSheet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -236,17 +245,33 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student_Attendance.resx">
-      <DependentUpon>Student_Attendance.vb</DependentUpon>
+    <EmbeddedResource Include="PrintForm.resx">
+      <DependentUpon>PrintForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="updateRecord.resx">
-      <DependentUpon>updateRecord.vb</DependentUpon>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report_Card.resx">
+      <DependentUpon>Report_Card.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Searchform.resx">
+      <DependentUpon>Searchform.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View_Record.resx">
       <DependentUpon>View_Record.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -278,6 +303,39 @@
     </None>
     <None Include="student_Database_Final.xss">
       <DependentUpon>student_Database_Final.xsd</DependentUpon>
+    </None>
+    <None Include="student_database_ProjectDataSet.xsc">
+      <DependentUpon>student_database_ProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="student_database_ProjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>student_database_ProjectDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="student_database_ProjectDataSet.xss">
+      <DependentUpon>student_database_ProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="student_database_ProjectFirstyear.xsc">
+      <DependentUpon>student_database_ProjectFirstyear.xsd</DependentUpon>
+    </None>
+    <None Include="student_database_ProjectFirstyear.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>student_database_ProjectFirstyear.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="student_database_ProjectFirstyear.xss">
+      <DependentUpon>student_database_ProjectFirstyear.xsd</DependentUpon>
+    </None>
+    <None Include="student_database_yeartwo.xsc">
+      <DependentUpon>student_database_yeartwo.xsd</DependentUpon>
+    </None>
+    <None Include="student_database_yeartwo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>student_database_yeartwo.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="student_database_yeartwo.xss">
+      <DependentUpon>student_database_yeartwo.xsd</DependentUpon>
     </None>
     <None Include="student_info.xsc">
       <DependentUpon>student_info.xsd</DependentUpon>
@@ -344,6 +402,17 @@
     </None>
     <None Include="student_infoDeleteinfomation.xss">
       <DependentUpon>student_infoDeleteinfomation.xsd</DependentUpon>
+    </None>
+    <None Include="yearonefinalone.xsc">
+      <DependentUpon>yearonefinalone.xsd</DependentUpon>
+    </None>
+    <None Include="yearonefinalone.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>yearonefinalone.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="yearonefinalone.xss">
+      <DependentUpon>yearonefinalone.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Data
+Imports System.Data.SqlClient
 
 Public Class AddRecord
     Dim gender As String
@@ -7,42 +8,24 @@ Public Class AddRecord
     Dim Dob As String
 
     Private Sub AddRecord_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim i As Integer
         'Department
         Department.Items.Add("BCA")
-        Department.Items.Add("BBA")
-        Department.Items.Add("BSW")
+        'Department.Items.Add("BBA")
+        'Department.Items.Add("BSW")
+        Department.Text = "BCA"
         'Gender
         ComboBox2.Items.Add("Male")
         ComboBox2.Items.Add("Female")
         ComboBox2.Items.Add("Others")
         'Joining year
-        ComboBox3.Items.Add("2017")
-        ComboBox3.Items.Add("2018")
-        ComboBox3.Items.Add("2019")
-        ComboBox3.Items.Add("2020")
-        ComboBox3.Items.Add("2021")
-        ComboBox3.Items.Add("2022")
-        ComboBox3.Items.Add("2023")
-        ComboBox3.Items.Add("2024")
-        ComboBox3.Items.Add("2025")
-        ComboBox3.Items.Add("2026")
-        ComboBox3.Items.Add("2027")
-        ComboBox3.Items.Add("2028")
+        For i = 2016 To 2028
+            ComboBox3.Items.Add(i.ToString)
+        Next
         'End Year
-        ComboBox4.Items.Add("2018")
-        ComboBox4.Items.Add("2019")
-        ComboBox4.Items.Add("2020")
-        ComboBox4.Items.Add("2021")
-        ComboBox4.Items.Add("2022")
-        ComboBox4.Items.Add("2023")
-        ComboBox4.Items.Add("2024")
-        ComboBox4.Items.Add("2025")
-        ComboBox4.Items.Add("2026")
-        ComboBox4.Items.Add("2027")
-        ComboBox4.Items.Add("2028")
-        ComboBox4.Items.Add("2029")
-        ComboBox4.Items.Add("2030")
-        ComboBox4.Items.Add("2031")
+        For i = 2017 To 2029
+            ComboBox4.Items.Add(i.ToString)
+        Next
         'Blood Group
         bloodgroup.Items.Add("AB+")
         bloodgroup.Items.Add("B+")
@@ -57,68 +40,81 @@ Public Class AddRecord
         Section.Items.Add("B")
         'Date of Birth
         'Days
-        Days.Items.Add("1")
-        Days.Items.Add("2")
-        Days.Items.Add("3")
-        Days.Items.Add("4")
-        Days.Items.Add("5")
-        Days.Items.Add("6")
-        Days.Items.Add("7")
-        Days.Items.Add("8")
-        Days.Items.Add("9")
-        Days.Items.Add("10")
-        Days.Items.Add("11")
-        Days.Items.Add("12")
-        Days.Items.Add("13")
-        Days.Items.Add("14")
-        Days.Items.Add("15")
-        Days.Items.Add("16")
-        Days.Items.Add("17")
-        Days.Items.Add("18")
-        Days.Items.Add("19")
-        Days.Items.Add("20")
-        Days.Items.Add("21")
-        Days.Items.Add("22")
-        Days.Items.Add("23")
-        Days.Items.Add("24")
-        Days.Items.Add("25")
-        Days.Items.Add("26")
-        Days.Items.Add("27")
-        Days.Items.Add("28")
-        Days.Items.Add("29")
-        Days.Items.Add("30")
-        Days.Items.Add("31")
-        'Month
-        Month.Items.Add("1")
-        Month.Items.Add("2")
-        Month.Items.Add("3")
-        Month.Items.Add("4")
-        Month.Items.Add("5")
-        Month.Items.Add("6")
-        Month.Items.Add("7")
-        Month.Items.Add("8")
-        Month.Items.Add("9")
-        Month.Items.Add("10")
-        Month.Items.Add("11")
-        Month.Items.Add("12")
-        'year
-        DobYear.Items.Add("1995")
-        DobYear.Items.Add("1996")
-        DobYear.Items.Add("1997")
-        DobYear.Items.Add("1998")
-        DobYear.Items.Add("1999")
-        DobYear.Items.Add("2000")
-        DobYear.Items.Add("2001")
-        DobYear.Items.Add("2002")
-        DobYear.Items.Add("2003")
-        DobYear.Items.Add("2004")
-        DobYear.Items.Add("2005")
-        DobYear.Items.Add("2006")
+        For i = 1 To 31
+            Days.Items.Add(i.ToString)
+        Next
 
+        ''Month
+        For i = 1 To 12
+            Month.Items.Add(i.ToString)
+        Next
+        'year
+        For i = 1990 To 2010
+            DobYear.Items.Add(i.ToString)
+        Next
+        Dim k As Integer
+        i = Today.Year
+        k = i + 3
+        ComboBox3.Text = i.ToString
+        ComboBox4.Text = k.ToString
     End Sub
 
+    'Add Records
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'Added String to Concantate year and Dob
+        year = ComboBox3.Text + " - " + ComboBox4.Text
+        Dob = DobYear.Text + "-" + Month.Text + "-" + Days.Text
+        Try
+            If RadioButton1.Checked Then
+                graduage = "UG"
+            ElseIf RadioButton2.Checked Then
+                graduage = "PG"
+            End If
+            connect()
+            Dim cmd As New SqlCommand
+            cmd.Connection = con
+            cmd.CommandText = "insert into student_details values(" + register_no.Text + ",'" + student_name.Text + "','" + Department.Text + "','" + Section.Text + "','" + Dob + "'," + age.Text + ",'" + graduage + "','" + ComboBox2.Text + "','" + year + "','" + bloodgroup.Text + "','" + father_name.Text + "','" + mother_name.Text + "','" + guardian_name.Text + "','" + address_home.Text + "','" + personal_email.Text + "','" + college_email.Text + "'," + pincode.Text + ");"
+
+            If cmd.ExecuteNonQuery() Then
+                MsgBox("Record added Succesfully")
+            Else
+                MsgBox("Record Already Registered")
+            End If
+
+        Catch ex As Exception
+            MsgBox("Kindly fill the Details")
+        End Try
+
+        con.Close()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        Main_Option.Show()
+    End Sub
+
+    Private Sub register_no_TextChanged(sender As Object, e As EventArgs) Handles register_no.TextChanged
+        college_email.Text = register_no.Text + "@mcc.edu.in"
+    End Sub
+
+    'Delete Record Coding
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        connect()
+        Dim cmd As New SqlCommand
+        cmd.Connection = con
+        Dim reg_no As String
+        reg_no = InputBox("Enter the Register Number For Student ")
+        cmd.CommandText = "delete from student_details where register_no = " + reg_no + ";"
+        If cmd.ExecuteNonQuery() Then
+            MsgBox("Record Deleted Succesfully")
+        Else
+            MsgBox("No Records Available")
+        End If
+    End Sub
+
+    'Update Record
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        connect()
         year = ComboBox3.Text + " - " + ComboBox4.Text
         Dob = DobYear.Text + "-" + Month.Text + "-" + Days.Text
         If RadioButton1.Checked Then
@@ -128,25 +124,70 @@ Public Class AddRecord
         Else
             MsgBox("Fill Correctly")
         End If
-
-        'Program to add Records
-        Dim con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\v11.0;Initial Catalog=student_info;Integrated Security=True")
         Dim cmd As New SqlCommand
         cmd.Connection = con
-        con.Open()
-        cmd.CommandText = "insert into student_details values(" + register_no.Text + ",'" + student_name.Text + "','" + Department.Text + "','" + Section.Text + "','" + Dob + "'," + age.Text + ",'" + graduage + "','" + ComboBox2.Text + "','" + year + "','" + bloodgroup.Text + "','" + father_name.Text + "','" + mother_name.Text + "','" + guardian_name.Text + "','" + address_home.Text + "','" + personal_email.Text + "','" + college_email.Text + "'," + pincode.Text + ");"
+        cmd.CommandText = "update student_details set student_name = '" + student_name.Text + "', Department = '" + Department.Text + "',Section = '" + Section.Text + "',Dob ='" + Dob + "',age =" + age.Text + ",graduate = '" + graduage + "',gender = '" + ComboBox2.Text + "',year_ = '" + year + "',bloodgroup ='" + bloodgroup.Text + "',father_name ='" + father_name.Text + "',mother_name = '" + mother_name.Text + "',guardian_name = '" + guardian_name.Text + "',address_home = '" + address_home.Text + "',personal_email = '" + personal_email.Text + "',college_email ='" + college_email.Text + "',pincode =" + pincode.Text + " where register_no =" + register_no.Text + ";"
         If cmd.ExecuteNonQuery() Then
-            MsgBox("Record added Succesfully")
+            MsgBox("Record Updated Succesfully")
+        Else
+            MsgBox("No Records Available")
         End If
-        con.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Hide()
-        Form3.Show()
-    End Sub
+    'Search Records
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        connect()
+        Dim reg_no As String
+        Dim tem As String
+        Dim temdob As String
+        Dim splitstr(3) As String
+        Dim tempyr As String
+        Dim splityr(3) As String
+        reg_no = InputBox("Enter the Register Number For Student ")
+        Dim sqlrd As SqlDataReader
+        Dim sqlcmd As New SqlCommand
+        sqlcmd.Connection = con
+        sqlcmd.CommandText = "select * from student_details where register_no = " + reg_no + ";"
+        Try
+            sqlrd = sqlcmd.ExecuteReader
+        If sqlrd.HasRows Then
+            While sqlrd.Read
+                register_no.Text = sqlrd(0)
+                student_name.Text = sqlrd(1)
+                Department.Text = sqlrd(2)
+                Section.Text = sqlrd(3)
+                temdob = sqlrd(4)
+                splitstr = Split(temdob, "-")
+                Days.Text = splitstr(0)
+                Month.Text = splitstr(1)
+                DobYear.Text = splitstr(2)
+                age.Text = sqlrd(5)
+                tem = sqlrd(6)
+                If tem = "UG" Then
+                    RadioButton1.Checked = True
+                ElseIf tem = "PG" Then
+                    RadioButton2.Checked = True
+                End If
+                ComboBox2.Text = sqlrd(7)
+                tempyr = sqlrd(8)
+                splityr = Split(tempyr, "-")
+                ComboBox3.Text = splityr(0)
+                ComboBox4.Text = splityr(1)
+                bloodgroup.Text = sqlrd(9)
+                father_name.Text = sqlrd(10)
+                mother_name.Text = sqlrd(11)
+                guardian_name.Text = sqlrd(12)
+                address_home.Text = sqlrd(13)
+                personal_email.Text = sqlrd(14)
+                college_email.Text = sqlrd(15)
+                pincode.Text = sqlrd(16)
+                End While
+        Else
+        MsgBox("No Record Found")
+            End If
+        Catch ex As Exception
+            MsgBox("No Record Found")
+        End Try
 
-    Private Sub register_no_TextChanged(sender As Object, e As EventArgs) Handles register_no.TextChanged
-        college_email.Text = register_no.Text + "@mcc.edu.in"
     End Sub
 End Class
